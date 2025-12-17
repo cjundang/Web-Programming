@@ -36,12 +36,15 @@
 
 ผู้เรียนจะได้เรียนรู้แนวคิดของ Web Application และโครงสร้างการทำงานแบบ Client–Server ในเชิงอธิบาย เพื่อให้เข้าใจบทบาทของเว็บเบราว์เซอร์และฝั่งประมวลผล จากนั้นศึกษาพื้นฐาน HTML สำหรับสร้างโครงสร้างหน้าเว็บ เช่น `<html>`, `<head>`, `<body>`, form, input, button และ table รวมถึง CSS เบื้องต้นสำหรับการตกแต่งหน้าเว็บ ปิดท้ายด้วยการใช้ Bootstrap เพื่อจัด Layout ด้วย Grid System และใช้งาน Component พื้นฐาน พร้อมกิจกรรมสร้างหน้าเว็บฟอร์มอย่างง่าย
 
+[Handout](pdf/01-Bootstrap_Web_App_Builder.pdf)
+
 ---
 
 ### [ชั่วโมงที่ 2 : JavaScript Syntax และ DOM](md/module-2.md)
 
 ชั่วโมงนี้มุ่งเน้นบทบาทของ JavaScript ในการทำให้เว็บโต้ตอบกับผู้ใช้ ผู้เรียนจะได้ฝึก JavaScript Syntax พื้นฐาน ได้แก่ ตัวแปร เงื่อนไข ลูป และฟังก์ชัน โดยเปรียบเทียบแนวคิดกับภาษา Python เพื่อเสริมความเข้าใจ จากนั้นเรียนรู้ DOM และการเข้าถึง HTML Element รวมถึงการใช้ Event Handling เช่น `onclick` และ `onchange` เพื่อควบคุมปุ่มและฟอร์มผ่าน JavaScript
 
+[Handout](pdf/02-JavaScript_Web_Interactivity.pdf)
 ---
 
 ### [ชั่วโมงที่ 3 : JSON และ Web API](md/module-3.md)
@@ -54,8 +57,11 @@
 
 ชั่วโมงนี้อธิบายแนวคิด Serverless และการใช้ Google Apps Script เป็น Backend อย่างง่าย ผู้เรียนจะได้เรียนรู้โครงสร้างของ Google Apps Script การเชื่อมต่อกับ Google Sheets และแนวคิด CRUD ได้แก่ Create, Read, Update และ Delete พร้อมกิจกรรมสร้าง Google Sheet เขียน Script จัดการข้อมูล และ Deploy เป็น Web App เพื่อทดสอบผ่าน URL
 
+[Handout](pdf/04-Build_a_Serverless_API_with_Google_Sheets.pdf)
 ---
 
 ### [ชั่วโมงที่ 5 : เชื่อมต่อ Web Page กับ Google Sheets](md/module-5.md)
 
 ผู้เรียนจะนำความรู้ทั้งหมดมาประยุกต์ใช้งานจริง โดยเชื่อมต่อหน้าเว็บกับ Google Apps Script ส่งข้อมูลจากฟอร์มไปบันทึกใน Google Sheets และดึงข้อมูลกลับมาแสดงผลบนหน้าเว็บในรูป JSON พร้อมเรียนรู้การจัดการ Error เบื้องต้น และอภิปรายแนวทางการนำไปประยุกต์ใช้ในระบบงานจริง เช่น ระบบบันทึกข้อมูลหรือแบบฟอร์มออนไลน์
+
+[Handout](pdf/05-สร้าง_Web_App_ด้วย_Google_Sheets.pdf)
