@@ -52,6 +52,9 @@
 
 ผู้เรียนจะได้เข้าใจแนวคิดของ JSON ในฐานะรูปแบบข้อมูลมาตรฐานของ Web Application ศึกษาโครงสร้าง Object และ Array ใน JavaScript การแปลงข้อมูล JSON และแนวคิด Web API จากนั้นฝึกเรียกใช้ Web API ด้วย `fetch()` ทดลองอ่านข้อมูล JSON จาก API สาธารณะ และแสดงผลข้อมูลบนหน้าเว็บ
 
+[Handout](pdf/03-JSON_Web_API_Integration.pdf)
+
+
 ---
 
 ### [ชั่วโมงที่ 4 : Google Apps Script และ CRUD Google Sheets](md/module-4.md)
