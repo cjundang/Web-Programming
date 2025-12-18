@@ -117,14 +117,13 @@ function response(message) {
 
 ## ส่วนที่ 3 : Deploy เป็น Web App
 
-1. คลิก **Deploy → New deployment**
+1. คลิก **Deploy  (การทำให้ใช้งานได้)→ New deployment** 
 2. Type: **Web app**
 3. Execute as: **Me**
 4. Who has access: **Anyone**
 5. คลิก **Deploy**
 6. อนุญาตสิทธิ์
 7. **คัดลอก URL** (สำคัญมาก)
-
 ---
 
 ## ส่วนที่ 4 : การทดสอบผ่าน URL (กิจกรรมปฏิบัติ)

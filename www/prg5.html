@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hour 5 : Web App with Google Sheets</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-4">
+
+    <!-- Title -->
+    <div class="text-center mb-4">
+        <h2>Student Management System</h2>
+        <p class="text-muted">Hour 5 : Frontend + Google Apps Script</p>
+    </div>
+
+    <!-- Form -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h4 class="card-title mb-3">Student Form</h4>
+
+            <div class="mb-3">
+                <label class="form-label">Student ID</label>
+                <input type="text" id="id" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Student Name</label>
+                <input type="text" id="name" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Score</label>
+                <input type="number" id="score" class="form-control">
+            </div>
+
+            <button class="btn btn-success" onclick="createData()">Create</button>
+            <button class="btn btn-warning" onclick="updateData()">Update</button>
+            <button class="btn btn-danger" onclick="deleteData()">Delete</button>
+            <button class="btn btn-primary" onclick="loadData()">Load</button>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h4 class="card-title mb-3">Student List</h4>
+
+            <table class="table table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td colspan="3" class="text-center">No data</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<script>
+/* =========================
+   CONFIG
+   ========================= */
+const SCRIPT_URL = "YOUR_SCRIPT_URL";
+
+/* =========================
+   READ
+   ========================= */
+function loadData() {
+    fetch(SCRIPT_URL)
+        .then(res => res.json())
+        .then(data => {
+            let table = document.getElementById("tableBody");
+            table.innerHTML = "";
+
+            data.forEach(s => {
+                table.innerHTML += `
+                    <tr>
+                        <td>${s.id}</td>
+                        <td>${s.name}</td>
+                        <td>${s.score}</td>
+                    </tr>`;
+            });
+        })
+        .catch(() => alert("Error loading data"));
+}
+
+/* =========================
+   CREATE / UPDATE / DELETE
+   ========================= */
+function createData() {
+    sendData("create");
+}
+
+function updateData() {
+    sendData("update");
+}
+
+function deleteData() {
+    sendData("delete");
+}
+
+function sendData(action) {
+    let data = {
+        id: document.getElementById("id").value,
+        name: document.getElementById("name").value,
+        score: document.getElementById("score").value
+    };
+
+    if (data.id === "") {
+        alert("ID is required");
+        return;
+    }
+
+    fetch(SCRIPT_URL + "?action=" + action, {
+        method: "POST",
+        body: JSON.stringify(data)
+    })
+    .then(() => loadData())
+    .catch(() => alert("Error sending data"));
+}
+</script>
+
+</body>
+</html>
