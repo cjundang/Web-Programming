@@ -8,6 +8,7 @@
 * ใช้ Component พื้นฐานของ Bootstrap
 * **ยังไม่ใช้ JavaScript** (ตามขอบเขตชั่วโมงที่ 1)
 
+![Alt text](prg-1.png)
 ---
 
 ## วิธีใช้งาน
