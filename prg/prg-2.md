@@ -75,7 +75,10 @@
     </div>
 
 </div>
+```
 
+Javascript
+```html
 <script>
     // Function to show name and score
     function showResult() {
